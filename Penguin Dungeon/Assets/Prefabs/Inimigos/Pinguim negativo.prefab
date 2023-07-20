@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5844348182077065148}
   - component: {fileID: 5844348182077065149}
   - component: {fileID: 5844348182077065150}
-  - component: {fileID: 5844348182077065146}
   - component: {fileID: 5844348182077065145}
+  - component: {fileID: 5844348182077065146}
   - component: {fileID: 6700086989806645023}
   m_Layer: 0
   m_Name: Pinguim negativo
@@ -133,20 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28245717, y: 0.2599315}
   m_EdgeRadius: 0
---- !u!114 &5844348182077065146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5844348182077065151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd1fe8281fd84ca7a1b3b5e5fa79c05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Player: {fileID: 0}
-  m_Velocidade: 3
 --- !u!95 &5844348182077065145
 Animator:
   serializedVersion: 3
@@ -166,6 +152,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5844348182077065146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844348182077065151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd1fe8281fd84ca7a1b3b5e5fa79c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 0}
+  m_Velocidade: 3
 --- !u!114 &6700086989806645023
 MonoBehaviour:
   m_ObjectHideFlags: 0

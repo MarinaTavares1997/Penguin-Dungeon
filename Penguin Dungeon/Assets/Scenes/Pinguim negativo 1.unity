@@ -920,7 +920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.4, y: -115.8}
+  m_AnchoredPosition: {x: 6, y: -75}
   m_SizeDelta: {x: 116.782745, y: 69.77112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965044339
@@ -1094,8 +1094,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "E assim, come\xE7ou novamente a ca\xE7ada do Pinguim Negativo e do Tubar\xE3o
-    contra o Pinguim Positivo."
+  m_Text: "E assim, come\xE7ou novamente a ca\xE7ada do Pinguim Negativo e dos escorpi\xF5es
+    contra o Pinguim."
 --- !u!222 &1031993770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1138,7 +1138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000012219, y: -20.125}
+  m_AnchoredPosition: {x: 3.6000264, y: 20.675003}
   m_SizeDelta: {x: 537.13245, y: 121.57898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067922216
@@ -1173,8 +1173,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\"O Pinguim Negativo e um tubar\xE3o!?\" pensou o Pinguim Positivo \"As
-    coisas n\xE3o poderiam serem mais dif\xEDceis, n\xE3o \xE9?\""
+  m_Text: "\"O Pinguim Negativo e os escorpi\xF5es!?\" pensou o Pinguim \"As coisas
+    n\xE3o poderiam serem mais dif\xEDceis, n\xE3o \xE9?\""
 --- !u!222 &1067922217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1446,7 +1446,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "- Voc\xEA pode at\xE9 ter achado que ganhou de mim na \xFAltima vez -
-    disse o Pinguim Negativo - Mas se enganou. E agora, trouxe o meu amigo Tubar\xE3o
+    disse o Pinguim Negativo - Mas se enganou. E agora trouxe os meu amigos escorpi\xF5es
     pra me ajudar a acabar com voc\xEA."
 --- !u!222 &1404230442
 CanvasRenderer:
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd094892c2184f55a404d1a852dff6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cena: Level 10
+  cena: Level 20
 --- !u!4 &1516165273
 Transform:
   m_ObjectHideFlags: 0
@@ -2184,7 +2184,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2017144656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2127508034}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1516165272}
+        m_MethodName: ChangeToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2017144656
 MonoBehaviour:
   m_ObjectHideFlags: 0
