@@ -925,12 +925,12 @@ PrefabInstance:
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: iLevelToLoad
-      value: 0
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: sLevelToLoad
-      value: 
+      value: Level 25
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953027, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
