@@ -261,12 +261,12 @@ PrefabInstance:
     - target: {fileID: 3950038970168854875, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: m_Text
-      value: "N\xEDvel 23"
+      value: "N\xEDvel 26"
       objectReference: {fileID: 0}
     - target: {fileID: 7366779277941526474, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 25
+      value: Level 26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406b20ea176ef49538c20223824aed2f, type: 3}
@@ -495,12 +495,17 @@ PrefabInstance:
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: iLevelToLoad
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: sLevelToLoad
-      value: 
+      value: Level 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
+        type: 3}
+      propertyPath: useIntegerToLoadLevel
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953027, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
