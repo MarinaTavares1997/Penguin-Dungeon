@@ -99,6 +99,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 27.unity
     guid: d9ea8ea680f0c4c8c9013ba65f51119f
   - enabled: 1
+    path: Assets/Scenes/Level 28.unity
+    guid: 4810186540a76472d833f16ea0603df1
+  - enabled: 1
     path: Assets/Scenes/Fim do jogo.unity
     guid: 27724777de0ec463da7d792059276ec4
   m_configObjects: {}
