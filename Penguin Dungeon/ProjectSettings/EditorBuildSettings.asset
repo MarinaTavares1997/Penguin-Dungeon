@@ -105,6 +105,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 29.unity
     guid: 7ef8cfc895f9c412e8d12e25de081dff
   - enabled: 1
+    path: Assets/Scenes/Pinguim negativo 2.unity
+    guid: af5eccaf02dec474fb796aa84b64f431
+  - enabled: 1
+    path: Assets/Scenes/Level 30.unity
+    guid: 9bddf27aed73e47988e70fb68f01c617
+  - enabled: 1
     path: Assets/Scenes/Fim do jogo.unity
     guid: 27724777de0ec463da7d792059276ec4
   m_configObjects: {}
