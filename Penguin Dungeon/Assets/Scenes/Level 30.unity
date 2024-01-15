@@ -266,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 7366779277941526474, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 28
+      value: Level 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406b20ea176ef49538c20223824aed2f, type: 3}
@@ -3963,12 +3963,12 @@ PrefabInstance:
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: iLevelToLoad
-      value: 0
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953025, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
       propertyPath: sLevelToLoad
-      value: 
+      value: "Conclus\xE3o"
       objectReference: {fileID: 0}
     - target: {fileID: 127245847380953027, guid: f02f097d1be994e90b2f2511d1b62d7a,
         type: 3}
