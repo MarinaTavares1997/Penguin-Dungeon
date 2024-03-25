@@ -1,0 +1,16 @@
+{
+    "name": "Player",
+    "rootNamespace": "PenguinDungeon",
+    "references": [
+        "GUID:060653ce41f1588e78b33c204b306a22"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
