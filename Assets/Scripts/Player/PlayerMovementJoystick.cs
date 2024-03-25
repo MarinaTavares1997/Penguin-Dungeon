@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerMovementJoystick : NetworkBehaviour
+public class PlayerMovementJoystick : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D playerRb;
