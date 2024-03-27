@@ -1,10 +1,10 @@
 {
     "name": "Enemy",
     "rootNamespace": "PenguinDungeon",
-    "references": [],
+    "references": ["GUID:39c0da6ff42c2c2a5b0d9b2631cda567"],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

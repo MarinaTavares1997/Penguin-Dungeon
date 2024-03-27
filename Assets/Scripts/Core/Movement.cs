@@ -1,13 +1,15 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PenguinDungeon.Core
 {
-    public class Movement
+    public unsafe class Movement
     {
         /// <summary>
         /// Movement Speed
         /// </summary>
-        public float MoveSpeed { get; set; }
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        public float* MoveSpeed { get; set; }
 
         private readonly Transform transform;
         private readonly Vector2[] positions;
@@ -37,6 +39,41 @@ namespace PenguinDungeon.Core
             this.positions = positions;
             useRandomPosition = false;
         }
+
+        
+        /// <summary>
+        /// Movement GameObjects in Unity
+        /// </summary>
+        /// <param name="transform">Object to movement</param>
+        /// <param name="positions">Positions to object go</param>
+        public Movement(Transform transform, IReadOnlyList<Transform> positions)
+        {
+            this.transform = transform;
+            this.positions = new Vector2[positions.Count];
+
+            for (var i = 0; i < positions.Count; i++)
+            {
+                this.positions[i] = positions[i].position;
+            }
+        }
+        
+        /// <summary>
+        /// Movement GameObjects in Unity
+        /// </summary>
+        /// <param name="transform">Object to movement</param>
+        /// <param name="positions">Positions to object go</param>
+        /// <param name="useRandomPosition">Will check the positions randomly</param>
+        public Movement(Transform transform, IReadOnlyList<Transform> positions, bool useRandomPosition)
+        {
+            this.transform = transform;
+            this.useRandomPosition = useRandomPosition;
+            this.positions = new Vector2[positions.Count];
+
+            for (var i = 0; i < positions.Count; i++)
+            {
+                this.positions[i] = positions[i].position;
+            }
+        }
         
         /// <summary>
         /// Movement GameObjects in Unity
@@ -55,10 +92,12 @@ namespace PenguinDungeon.Core
         /// Move game object to a specific position 
         /// </summary>
         /// <param name="position"></param>
-        // ReSharper disable once UnusedMember.Global
-        public virtual void MoveToPosition(Vector2 position)
+        /// <param name="deltaTime"></param>
+        // ReSharper disable once MemberCanBePrivate.Global
+        public void MoveToPosition(Vector2 position, bool deltaTime)
         {
-            transform.Translate(position * MoveSpeed);
+            var step = deltaTime ? *MoveSpeed * Time.deltaTime : *MoveSpeed;
+            transform.position = Vector2.MoveTowards(transform.position, position, step);
         }
 
         private bool PositionChecked()
@@ -71,13 +110,13 @@ namespace PenguinDungeon.Core
         /// The positions have to be defined on instantiate the object
         /// </summary>
         // ReSharper disable once UnusedMember.Global
-        public virtual void MoveInRound()
+        public void MoveInRound(bool deltaTIme)
         {
-            MoveToPosition(positions[currentPosition]);
+            MoveToPosition(positions[currentPosition], deltaTIme);
 
             if (PositionChecked())
             {
-                currentPosition = useRandomPosition ? Random.Range(0, positions.Length - 1) :
+                currentPosition = useRandomPosition ? Random.Range(0, positions.Length) :
                     currentPosition >= positions.Length ? 0 : currentPosition++;
             }
         }
@@ -90,7 +129,7 @@ namespace PenguinDungeon.Core
         // ReSharper disable once UnusedMember.Global
         public void MoveToDirection(Vector2 direction)
         {
-            transform.Translate(direction * MoveSpeed);
+            transform.Translate(direction * *MoveSpeed);
         }
     }
 }

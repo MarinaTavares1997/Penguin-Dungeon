@@ -1,14 +1,28 @@
-using System;
-using PlasticPipe.Server;
 using UnityEngine;
+using PenguinDungeon.Core;
 
 namespace PenguinDungeon.Enemy
 {
     public class Enemy : MonoBehaviour
     {
-        private void Start()
+        [SerializeField] private Transform[] points;
+        [SerializeField] private float speed;
+        private Movement movement;
+        
+        private unsafe void Start()
         {
-            var movement = new Movement(this.transform);
+            fixed (float* ptr = &speed)
+            {
+                movement = new Movement(transform, points, true)
+                {
+                    MoveSpeed = ptr
+                };
+            }
+        }
+
+        private void Update()
+        {
+            movement.MoveInRound(true);
         }
     }
 }
