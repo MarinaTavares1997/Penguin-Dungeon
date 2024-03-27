@@ -7,6 +7,8 @@ namespace PenguinDungeon.Enemy
     {
         [SerializeField] private Transform[] points;
         [SerializeField] private float speed;
+        [SerializeField] private bool flip;
+        
         private Movement movement;
         
         private unsafe void Start()
@@ -15,7 +17,8 @@ namespace PenguinDungeon.Enemy
             {
                 movement = new Movement(transform, points, true)
                 {
-                    MoveSpeed = ptr
+                    MoveSpeed = ptr,
+                    FlipObjectOnChangeDirection = flip
                 };
             }
         }

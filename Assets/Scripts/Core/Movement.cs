@@ -11,13 +11,15 @@ namespace PenguinDungeon.Core
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public float* MoveSpeed { get; set; }
 
+        public bool FlipObjectOnChangeDirection { get; set; }
+        
         private readonly Transform transform;
         private readonly Vector2[] positions;
 
         private readonly bool useRandomPosition;
 
         private int currentPosition;
-        
+
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -27,7 +29,7 @@ namespace PenguinDungeon.Core
             this.transform = transform;
             this.useRandomPosition = false;
         }
-        
+
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -40,7 +42,7 @@ namespace PenguinDungeon.Core
             useRandomPosition = false;
         }
 
-        
+
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -56,7 +58,7 @@ namespace PenguinDungeon.Core
                 this.positions[i] = positions[i].position;
             }
         }
-        
+
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -74,7 +76,7 @@ namespace PenguinDungeon.Core
                 this.positions[i] = positions[i].position;
             }
         }
-        
+
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -99,7 +101,7 @@ namespace PenguinDungeon.Core
             var step = deltaTime ? *MoveSpeed * Time.deltaTime : *MoveSpeed;
             transform.position = Vector2.MoveTowards(transform.position, position, step);
         }
-
+        
         private bool PositionChecked()
         {
             return (Vector2)transform.position == positions[currentPosition];
@@ -114,11 +116,18 @@ namespace PenguinDungeon.Core
         {
             MoveToPosition(positions[currentPosition], deltaTIme);
 
-            if (PositionChecked())
-            {
-                currentPosition = useRandomPosition ? Random.Range(0, positions.Length) :
-                    currentPosition >= positions.Length ? 0 : currentPosition++;
-            }
+            if (!PositionChecked()) return;
+            currentPosition = useRandomPosition ? Random.Range(0, positions.Length) :
+                currentPosition >= positions.Length ? 0 : currentPosition++;
+                
+            if(FlipObjectOnChangeDirection) Flip();
+        }
+
+        private void Flip()
+        {
+            var scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
         }
         
         /// <summary>
