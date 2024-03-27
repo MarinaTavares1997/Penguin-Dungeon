@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace PenguinDungeon
 {
@@ -7,19 +8,21 @@ namespace PenguinDungeon
         public GameObject saida;
 
         public GameObject pinguimnegativo;
+        private GameObject o;
+
+        private void Start()
+        {
+            o = GameObject.Find("Pinguim negativo");
+            saida.SetActive(true);
+        }
+
 
         // Update is called once per frame
         void Update()
         {
-            pinguimnegativo = GameObject.Find("Pinguim negativo");
-
-            if(!GameObject.Find("Pinguim negativo"))
+            if(!o)
             {
                 saida.SetActive(false);
-            }
-            else
-            {
-                saida.SetActive(true);
             }
         }
     }
