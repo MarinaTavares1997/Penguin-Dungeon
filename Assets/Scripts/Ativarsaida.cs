@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace PenguinDungeon
 {
@@ -18,7 +17,7 @@ namespace PenguinDungeon
 
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if(!o)
             {

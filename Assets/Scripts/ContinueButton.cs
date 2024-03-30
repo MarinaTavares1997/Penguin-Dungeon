@@ -6,7 +6,7 @@ namespace PenguinDungeon
     public class ContinueButton : MonoBehaviour
     {
         private int sceneToContinue;
-
+        
         public void ContinueGame()
         {
             sceneToContinue = PlayerPrefs.GetInt("SavedScene");

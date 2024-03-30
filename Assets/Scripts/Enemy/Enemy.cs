@@ -13,13 +13,16 @@ namespace PenguinDungeon.Enemy
         
         private unsafe void Start()
         {
-            fixed (float* ptr = &speed)
+            fixed (bool* flipObj = &flip)
             {
-                movement = new Movement(transform, points, true)
+                fixed (float* ptr = &speed)
                 {
-                    MoveSpeed = ptr,
-                    FlipObjectOnChangeDirection = flip
-                };
+                    movement = new Movement(transform, points, true)
+                    {
+                        MoveSpeed = ptr,
+                        FlipObjectOnChangeDirection = flipObj
+                    };
+                }
             }
         }
 

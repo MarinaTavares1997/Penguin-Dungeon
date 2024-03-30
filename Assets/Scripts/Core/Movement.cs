@@ -11,7 +11,7 @@ namespace PenguinDungeon.Core
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public float* MoveSpeed { get; set; }
 
-        public bool FlipObjectOnChangeDirection { get; set; }
+        public bool* FlipObjectOnChangeDirection { get; set; }
         
         private readonly Transform transform;
         private readonly Vector2[] positions;
@@ -120,7 +120,7 @@ namespace PenguinDungeon.Core
             currentPosition = useRandomPosition ? Random.Range(0, positions.Length) :
                 currentPosition >= positions.Length ? 0 : currentPosition++;
                 
-            if(FlipObjectOnChangeDirection) Flip();
+            if(*FlipObjectOnChangeDirection) Flip();
         }
 
         private void Flip()

@@ -11,7 +11,6 @@ namespace PenguinDungeon
         {
             currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
-            //SceneManager.LoadScene(0);
         }
     }
 }

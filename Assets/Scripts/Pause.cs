@@ -5,7 +5,7 @@ namespace PenguinDungeon
 {
     public class Pause : MonoBehaviour
     {
-        public static bool GameIsPaused = false;
+        public static bool GameIsPaused;
 
         public GameObject pauseMenuUI;
 

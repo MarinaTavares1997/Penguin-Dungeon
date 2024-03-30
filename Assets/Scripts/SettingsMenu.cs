@@ -17,6 +17,7 @@ namespace PenguinDungeon
             QualitySettings.SetQualityLevel(qualityIndex);
         }
 
+        // ReSharper disable once UnusedMember.Global
         public void SetResolution()
         {
             switch (DResolution.value)

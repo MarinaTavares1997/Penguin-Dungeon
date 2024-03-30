@@ -11,7 +11,6 @@ namespace PenguinDungeon
             if(collision.gameObject.CompareTag("Player"))
             {
                 Destroy(this.gameObject);
-            
                 GH.coins++;
             }
         }

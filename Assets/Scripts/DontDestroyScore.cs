@@ -15,10 +15,5 @@ namespace PenguinDungeon
             }
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
     }
 }
