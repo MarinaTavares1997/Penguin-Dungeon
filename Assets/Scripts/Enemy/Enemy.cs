@@ -1,6 +1,5 @@
 using UnityEngine;
 using PenguinDungeon.Core;
-using UnityEngine.Events;
 
 namespace PenguinDungeon.Enemy
 {
@@ -9,9 +8,7 @@ namespace PenguinDungeon.Enemy
         [SerializeField] private Transform[] points;
         [SerializeField] private float speed;
         [SerializeField] private bool flip;
-
-        [SerializeField] private UnityEvent onChangeDirection;
-
+        
         private Movement movement;
 
         [SerializeField] private Animator animator;
@@ -29,7 +26,6 @@ namespace PenguinDungeon.Enemy
                     {
                         MoveSpeed = ptr,
                         FlipObjectOnChangeDirection = flipObj,
-                        onChangeTarget = onChangeDirection
                     };
                 }
             }
@@ -37,16 +33,23 @@ namespace PenguinDungeon.Enemy
 
         private void Update()
         {
+            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             movement.MoveInRound(true);
+
+            if (movement.GetChangeYFlip() && lastPos != position)
+            {
+                FlipY();
+            }
         }
 
+        private byte lastPos = 1;
         private byte position;
 
         public void FlipY()
         {
-            position = position == 0 ? position = 1 : position = 0;
-            Debug.Log(position);
-            animator.SetFloat("blend", position);
+            lastPos = position;
+            position = position == 1 ? position = 0 : position = 1;
+            animator.SetFloat(Blend, position);
         }
     }
 }

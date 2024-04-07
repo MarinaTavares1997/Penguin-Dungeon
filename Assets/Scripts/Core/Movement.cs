@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PenguinDungeon.Core
 {
-    public unsafe class Movement
+    public unsafe class Movement 
     {
         /// <summary>
         /// Movement Speed
@@ -11,6 +12,10 @@ namespace PenguinDungeon.Core
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public float* MoveSpeed { get; set; }
 
+        public UnityEvent OnChangeTarget;
+
+        private bool changeYFlip;
+        
         public bool* FlipObjectOnChangeDirection { get; set; }
         
         private readonly Transform transform;
@@ -41,8 +46,7 @@ namespace PenguinDungeon.Core
             this.positions = positions;
             useRandomPosition = false;
         }
-
-
+        
         /// <summary>
         /// Movement GameObjects in Unity
         /// </summary>
@@ -102,6 +106,10 @@ namespace PenguinDungeon.Core
             transform.position = Vector2.MoveTowards(transform.position, position, step);
         }
         
+        /// <summary>
+        /// Checks if player arrived target position
+        /// </summary>
+        /// <returns></returns>
         private bool PositionChecked()
         {
             return (Vector2)transform.position == positions[currentPosition];
@@ -119,16 +127,32 @@ namespace PenguinDungeon.Core
             if (!PositionChecked()) return;
             currentPosition = useRandomPosition ? Random.Range(0, positions.Length) :
                 currentPosition >= positions.Length ? 0 : currentPosition++;
-                
-            if(*FlipObjectOnChangeDirection) Flip();
+
+            var position = transform.position;
+            var xFlip = position.x - positions[currentPosition].x != 0;
+            var yFlip = position.y - positions[currentPosition].y != 0;
+            
+            
+            if(*FlipObjectOnChangeDirection && xFlip) FlipX();
+            if (yFlip) changeYFlip = true;
+            
+            OnChangeTarget?.Invoke();
         }
 
-        private void Flip()
+        public bool GetChangeYFlip()
+        {
+            var value = changeYFlip;
+            changeYFlip = false;
+            return value;
+        }
+
+        private void FlipX()
         {
             var scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
         }
+
         
         /// <summary>
         /// Translate the object to one direction
