@@ -6,8 +6,9 @@ namespace PenguinDungeon.Enemy
     public class Enemy : MonoBehaviour
     {
         [SerializeField] private Transform[] points;
-        [SerializeField] private float speed;
-        [SerializeField] private bool flip;
+        [SerializeField] private float speed; 
+        [SerializeField] private bool flipX;
+        [SerializeField] private bool flipY;
         
         private Movement movement;
 
@@ -18,7 +19,7 @@ namespace PenguinDungeon.Enemy
         {
             animator = GetComponent<Animator>() != null ? GetComponent<Animator>() : null;
 
-            fixed (bool* flipObj = &flip)
+            fixed (bool* flipObj = &flipX)
             {
                 fixed (float* ptr = &speed)
                 {
@@ -33,9 +34,10 @@ namespace PenguinDungeon.Enemy
 
         private void Update()
         {
-            // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             movement.MoveInRound(true);
 
+            if(flipY) return;
+            
             if (movement.GetChangeYFlip() && lastPos != position)
             {
                 FlipY();
@@ -45,7 +47,7 @@ namespace PenguinDungeon.Enemy
         private byte lastPos = 1;
         private byte position;
 
-        public void FlipY()
+        private void FlipY()
         {
             lastPos = position;
             position = position == 1 ? position = 0 : position = 1;
