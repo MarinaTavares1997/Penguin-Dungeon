@@ -10,6 +10,9 @@ namespace PenguinDungeon
         // Update is called once per frame
         void Update()
         {
+            if (m_Player == null)
+                return;
+
             transform.position = Vector2.MoveTowards(transform.position, m_Player.position, m_Velocidade * Time.deltaTime);
         }
     }

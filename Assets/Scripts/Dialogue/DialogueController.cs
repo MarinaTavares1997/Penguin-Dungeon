@@ -1,15 +1,17 @@
 using System;
 using System.IO;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.Networking;
 
 namespace PenguinDungeon.Dialogue
 {
     public class DialogueController : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI textUGUI;
-        [SerializeField] private string dialogueFile ;
+        [SerializeField] private string dialogueFile;
 
         [SerializeField] private bool startOnAwake;
         [SerializeField] private UnityEvent onDialogueEnds;
@@ -27,9 +29,6 @@ namespace PenguinDungeon.Dialogue
             }
         }
         
-        /// <summary>
-        /// Pass to Next Dialogue
-        /// </summary>
         public void Button()
         {
             WriteText();
@@ -40,16 +39,50 @@ namespace PenguinDungeon.Dialogue
             if (texts is null)
             {
                 var filePath = FilePath + dialogueFile + ".json";
-                
-                if (!File.Exists(filePath))
+
+                if (Application.platform == RuntimePlatform.Android)
                 {
-                    throw new Exception($"The file {dialogueFile}.json not exists.\n Path: {filePath}");
+                    StartCoroutine(LoadDialogueFromStreamingAssets(filePath));
                 }
-                
-                var file = File.ReadAllText(filePath);
-                texts = JsonUtility.FromJson<DialogueFile>(file).text;
+                else
+                {
+                    if (!File.Exists(filePath))
+                    {
+                        throw new Exception($"O arquivo {dialogueFile}.json não existe.\n Caminho: {filePath}");
+                    }
+
+                    var file = File.ReadAllText(filePath);
+                    texts = JsonUtility.FromJson<DialogueFile>(file).text;
+                    DisplayText();
+                }
             }
-            
+            else
+            {
+                DisplayText();
+            }
+        }
+
+        private IEnumerator LoadDialogueFromStreamingAssets(string filePath)
+        {
+            using (UnityWebRequest request = UnityWebRequest.Get(filePath))
+            {
+                yield return request.SendWebRequest();
+
+                if (request.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"Erro ao carregar o arquivo JSON: {request.error}");
+                }
+                else
+                {
+                    var file = request.downloadHandler.text;
+                    texts = JsonUtility.FromJson<DialogueFile>(file).text;
+                    DisplayText();
+                }
+            }
+        }
+
+        private void DisplayText()
+        {
             var endDialogue = currentTextIndex >= texts.Length;
             if (endDialogue)
             {
@@ -57,12 +90,11 @@ namespace PenguinDungeon.Dialogue
                 Destroy(gameObject);
                 return;
             }
-            
-            // write the text in screen
+
             textUGUI.text = texts[currentTextIndex];
             currentTextIndex++;
         }
-        
+
         [Serializable]
         private class DialogueFile
         {
@@ -70,3 +102,4 @@ namespace PenguinDungeon.Dialogue
         }
     }
 }
+

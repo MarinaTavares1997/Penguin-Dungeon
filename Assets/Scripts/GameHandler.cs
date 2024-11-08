@@ -13,7 +13,7 @@ namespace PenguinDungeon
         // Update is called once per frame
         void Update()
         {
-            coinScore.text = coins.ToString() + " ";
+            coinScore.text = "=  " + coins.ToString();
 
             if(coins == peixe)
             {
