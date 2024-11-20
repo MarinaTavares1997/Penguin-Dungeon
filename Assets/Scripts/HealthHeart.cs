@@ -9,7 +9,7 @@ namespace PenguinDungeon
 
         Image heartImage;
 
-        private void Start()
+        private void OnEnable()
         {
             heartImage = GetComponent<Image>();
         }

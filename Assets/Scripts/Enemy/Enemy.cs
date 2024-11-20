@@ -15,6 +15,9 @@ namespace PenguinDungeon.Enemy
         [SerializeField] private Animator animator;
         private static readonly int Blend = Animator.StringToHash("Blend");
 
+        private byte lastPos = 1;
+        private byte position = 0;
+
         private unsafe void Start()
         {
             animator = GetComponent<Animator>() != null ? GetComponent<Animator>() : null;
@@ -32,7 +35,7 @@ namespace PenguinDungeon.Enemy
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             movement.MoveInRound(true);
 
@@ -43,9 +46,6 @@ namespace PenguinDungeon.Enemy
                 FlipY();
             }
         }
-
-        private byte lastPos = 1;
-        private byte position;
 
         private void FlipY()
         {

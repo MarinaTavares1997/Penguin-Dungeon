@@ -31,7 +31,6 @@ namespace PenguinDungeon.Interaction
         {
             if (collision.gameObject.tag == "Player")
             {
-                Debug.Log("deu");
                 if (Alavanca.alavanca)
                 {
                     agua.SetActive(true);
@@ -39,7 +38,6 @@ namespace PenguinDungeon.Interaction
                 else
                 {
                     agua.SetActive(false);
-                    Debug.Log("tocou");
                 }
            
             }

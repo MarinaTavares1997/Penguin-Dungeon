@@ -15,6 +15,10 @@ namespace PenguinDungeon.Player
             health = maxHealth;
         }
 
+        private void OnDestroy() {
+            PlayerManager.isGameOver = true;
+        }
+
         public void TakeDamage(float amount)
         {
             health -= amount;

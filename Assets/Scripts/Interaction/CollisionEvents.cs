@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 using ArgumentOutOfRangeException = System.ArgumentOutOfRangeException;
+using PenguinDungeon;
 
 namespace PenguinDungeon.Interaction
 {
@@ -32,7 +33,7 @@ namespace PenguinDungeon.Interaction
                 case Objects.Alavanca:
                     if (playerCollider)
                     {
-                        var component = other.GetComponent<Alavanca>();
+                        var component = gameObject.GetComponent<Alavanca>();
                         
                         component.alavanca = true;
                         component.tempo = component.tempototal;
@@ -40,10 +41,7 @@ namespace PenguinDungeon.Interaction
                     break;
                 
                 case Objects.Armadilha:
-                    if (playerCollider)
-                    {
-                        Destroy(other.gameObject);
-                    }
+                    Destroy(other.gameObject);
                     break;
                 
                 default:
