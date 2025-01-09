@@ -8,10 +8,14 @@ namespace PenguinDungeon
     {
         private float x;
 
-        // Update is called once per frame
+        void Start()
+        {
+            
+        }
+
         void Update()
         {
-            Rotation();        
+            Rotation();       
         }
 
         private void Rotation()
