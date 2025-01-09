@@ -360,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinScore: {fileID: 7135647077792593527}
   coins: 0
-  peixe: 23
+  peixe: 22
   saida: {fileID: 0}
 --- !u!114 &4508168791613073585
 MonoBehaviour:
@@ -453,7 +453,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "N\xEDvel 3"
+  m_Text: "N\xEDvel 8"
 --- !u!114 &3950038970168854874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,7 +919,7 @@ PrefabInstance:
     - target: {fileID: 5831410805674250164, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 3
+      value: Level 8
       objectReference: {fileID: 0}
     - target: {fileID: 5831410805674250165, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
         type: 3}
@@ -1326,7 +1326,7 @@ PrefabInstance:
     - target: {fileID: 8490948736090849810, guid: 989b553dad4a944588bea690bce44c1c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8490948736090849810, guid: 989b553dad4a944588bea690bce44c1c,
         type: 3}
