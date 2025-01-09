@@ -5562,6 +5562,16 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 3950038969276897164, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_CellSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038969276897164, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_CellSize.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3950038969276897165, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: m_Sprite

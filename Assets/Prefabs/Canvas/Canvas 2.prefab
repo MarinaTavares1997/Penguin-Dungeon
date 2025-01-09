@@ -1369,11 +1369,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6180887199399765890, guid: 264c04fccd0b24884930301b8c0e6deb,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6180887199399765890, guid: 264c04fccd0b24884930301b8c0e6deb,
-        type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -1461,11 +1456,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6180887199399765891, guid: 264c04fccd0b24884930301b8c0e6deb,
-        type: 3}
-      propertyPath: playerHealth
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6180887199399765901, guid: 264c04fccd0b24884930301b8c0e6deb,
         type: 3}
