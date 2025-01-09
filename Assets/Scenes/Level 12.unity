@@ -2644,6 +2644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
+      propertyPath: peixe
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
       propertyPath: saida
       value: 
       objectReference: {fileID: 954640909}
@@ -2746,6 +2751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854875, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_Text
+      value: "N\xEDvel 12"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

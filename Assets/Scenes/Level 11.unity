@@ -300,6 +300,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011275227848109550, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247895554438903363, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3950038969276897167, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: playerHealth
@@ -309,6 +369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: peixe
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
@@ -414,6 +479,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854875, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_Text
+      value: "N\xEDvel 11"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
