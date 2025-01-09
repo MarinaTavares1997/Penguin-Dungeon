@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7633635690812159268}
   - component: {fileID: 7633635690812159321}
   - component: {fileID: 832076875456783296}
+  - component: {fileID: 415207822912190406}
   m_Layer: 0
   m_Name: Serra
-  m_TagString: Enemy
+  m_TagString: Serra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,5 +154,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f5b5a250381f4617935d73515b4add9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &415207822912190406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633635690812159269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5ab24f6d91a0d43807445b7751631c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
