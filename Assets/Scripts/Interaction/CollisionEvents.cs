@@ -41,6 +41,7 @@ namespace PenguinDungeon.Interaction
                     break;
                 
                 case Objects.Armadilha:
+                    if (!playerCollider)
                     Destroy(other.gameObject);
                     break;
                 
