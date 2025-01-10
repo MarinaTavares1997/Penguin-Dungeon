@@ -1510,8 +1510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Marina Tavares (Hybrid Choko) - Dire\xE7\xE3o, nome do jogo, arte, programa\xE7\xE3o,
-    menu, tela de pause e localiza\xE7\xE3o (Portugu\xEAs (Brasil) e Ingl\xEAs)."
+  m_Text: "Marina Tavares (Hybrid Choko) - Dire\xE7\xE3o e programa\xE7\xE3o."
 --- !u!222 &1682031428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1810,7 +1809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.032959, y: 72.884}
+  m_AnchoredPosition: {x: 0.032959, y: 82}
   m_SizeDelta: {x: 471.63834, y: 29.999977}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999096769
@@ -1846,7 +1845,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Olly pony - M\xFAsica de background"
+  m_Text: "Olly pony - M\xFAsica de background."
 --- !u!222 &1999096770
 CanvasRenderer:
   m_ObjectHideFlags: 0
