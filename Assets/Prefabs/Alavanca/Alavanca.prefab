@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2790505146365914260}
   - component: {fileID: 2790505146365914256}
   - component: {fileID: 2790505146365914257}
-  - component: {fileID: 4983716321702001543}
+  - component: {fileID: 2218365173674795103}
   m_Layer: 0
   m_Name: Alavanca
   m_TagString: Untagged
@@ -198,7 +198,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4983716321702001543
+--- !u!114 &2218365173674795103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
