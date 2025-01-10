@@ -886,6 +886,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3950038970111885855}
     m_Modifications:
+    - target: {fileID: 5831410804528147646, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
+        type: 3}
+      propertyPath: m_Text
+      value: GAME OVER
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831410804528147646, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: faa0cb096b2dc0b49ab7794fe2c33fd3,
+        type: 3}
+    - target: {fileID: 5831410804528147646, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 86
+      objectReference: {fileID: 0}
     - target: {fileID: 5831410804528147647, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1048,8 +1064,33 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6636340962366946279}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5831410804528147640, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3195987493376201411}
   m_SourcePrefab: {fileID: 100100000, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf, type: 3}
+--- !u!1 &7366779277074312390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5831410804528147640, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3950038969533546622}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3195987493376201411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366779277074312390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -2.72, y: -2.26}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7366779278028632068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5831410805721378938, guid: 9064ff5a9a0cc4f95a4b0f682aac08cf,
@@ -1530,7 +1571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 80903a0daec954ff09b841d0c35f692c,
+      objectReference: {fileID: 12800000, guid: faa0cb096b2dc0b49ab7794fe2c33fd3,
         type: 3}
     - target: {fileID: 6157567372718676399, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
         type: 3}
@@ -1540,7 +1581,7 @@ PrefabInstance:
     - target: {fileID: 6157567372718676399, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 128
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 6157567373639239016, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
         type: 3}
@@ -1710,8 +1751,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6157567372718676393, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 906306112914312737}
   m_SourcePrefab: {fileID: 100100000, guid: 45a7dc0b7fdbc410e9d02eef63be2330, type: 3}
+--- !u!1 &3950038969242619581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6157567372718676393, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
+    type: 3}
+  m_PrefabInstance: {fileID: 7180225879350875924}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &906306112914312737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950038969242619581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: -2.72, y: -2.26}
+  m_UseGraphicAlpha: 1
 --- !u!224 &3950038970197070460 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6157567373639239016, guid: 45a7dc0b7fdbc410e9d02eef63be2330,
