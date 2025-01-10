@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2274862608419678627}
   - component: {fileID: 2274862608419678626}
   - component: {fileID: 2274862608419678630}
-  - component: {fileID: 1537351865103844010}
+  - component: {fileID: 2620181148069149607}
   m_Layer: 0
   m_Name: "\xC1gua"
   m_TagString: Trap
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &1537351865103844010
+--- !u!114 &2620181148069149607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
