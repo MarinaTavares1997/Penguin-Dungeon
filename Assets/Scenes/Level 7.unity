@@ -4660,6 +4660,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3950038969276897166, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 3950038969276897167, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: playerHealth
@@ -4779,6 +4784,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "N\xEDvel 7"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854876, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854876, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

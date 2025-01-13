@@ -248,7 +248,7 @@ PrefabInstance:
     - target: {fileID: 3950038969276897166, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 29.994995
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 3950038969276897166, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
@@ -389,6 +389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "N\xEDvel 21"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854876, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970168854876, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7366779277941526474, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
