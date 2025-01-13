@@ -4795,6 +4795,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5.600006
       objectReference: {fileID: 0}
+    - target: {fileID: 7366779277941526474, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
