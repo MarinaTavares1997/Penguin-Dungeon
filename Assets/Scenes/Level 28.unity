@@ -148,6 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
         type: 3}
+      propertyPath: peixe
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950038970111885850, guid: 406b20ea176ef49538c20223824aed2f,
+        type: 3}
       propertyPath: saida
       value: 
       objectReference: {fileID: 1551136488}
